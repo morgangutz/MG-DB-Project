@@ -1,0 +1,42 @@
+<html>
+    <head>
+	    <title> Add Customer </title>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='file_format.css') }}">
+    </head>
+
+    <body>
+        <h2>Add Customer:</h2>
+        <form name = 'New Customer' method = "post">
+            <table class = center>
+                <tr>
+                    <td>First Name: </td>
+                    <td><input type = "text" name = "fName" /></td>
+                </tr>
+
+                <tr>
+                    <td> Last Name: </td>
+                    <td><input type = "text" name = "lName" /></td>
+                </tr>
+            </table><br/>
+
+            Select gender <br/>
+            Male: <input type = "radio" name = "gender" value="M">
+            Female: <input type = "radio" name = "gender" value="F"><br/><br/>
+
+            Date of Birth: <br/>
+            <textarea name = "DOB" rows= "1" cols = "9">YYYY-MM-DD
+            </textarea><br/><br/>
+
+            <input type = "submit" name = "join" value = "Submit" />
+            <input type = "reset" name = "clear" value = "Cancel" /><br/><br/>
+            <a href="http://127.0.0.1:5000/">Return to Home Page</a>
+
+        </form><br/>   
+
+        {%if submit%}
+        <h2>You are signed up!</h2>
+        {%endif%}
+
+
+    </body>
+</html>
